@@ -1,11 +1,11 @@
 $(document).ready(() => {
   // Getting references to our form and input
-  const signUpForm = $('form.signup');
-  const emailInput = $('input#email-input');
-  const passwordInput = $('input#password-input');
+  const signUpForm = $("form.signup");
+  const emailInput = $("input#email-input");
+  const passwordInput = $("input#password-input");
 
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on('submit', (event) => {
+  signUpForm.on("submit", (event) => {
     event.preventDefault();
     const userData = {
       email: emailInput.val().trim(),
@@ -16,27 +16,30 @@ $(document).ready(() => {
       return;
     }
     // If we have an email and password, run the signUpUser function
+    // eslint-disable-next-line no-use-before-define
     signUpUser(userData.email, userData.password);
-    emailInput.val('');
-    passwordInput.val('');
+    emailInput.val("");
+    passwordInput.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
   // Otherwise we log any errors
   function signUpUser(email, password) {
-    $.post('/api/signup', {
+    $.post("/api/signup", {
       email,
       password,
     })
+      // eslint-disable-next-line no-unused-vars
       .then((data) => {
-        window.location.replace('/members');
+        window.location.replace("/members");
         // If there's an error, handle it by throwing up a bootstrap alert
       })
+      // eslint-disable-next-line no-use-before-define
       .catch(handleLoginErr);
   }
 
   function handleLoginErr(err) {
-    $('#alert .msg').text(err.responseJSON);
-    $('#alert').fadeIn(500);
+    $("#alert .msg").text(err.responseJSON);
+    $("#alert").fadeIn(500);
   }
 });
