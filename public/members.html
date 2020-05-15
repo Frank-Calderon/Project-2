@@ -2,30 +2,93 @@
 <html lang="en">
 
 <head>
-  <title>Passport Authentication</title>
+  <title>Covid Tracker</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
   <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Prata&display=swap" rel="stylesheet">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="public/login.html" rel="./login.html">
+  <link href="public/main.html" rel="./main.html">
+  <link href="public/signup.html" rel="./signup.html">
 </head>
 
+<!--Home page is the member's page for users/members-->
+
 <body>
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-sm collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Logout</a> <!--log out should redirect to the main page-->
+        </li>
+      </ul>
     </div>
-  </div>
-</nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <h2>Welcome <span class="member-name"></span></h2>
+  </nav>
+
+    <!--JUMBOTRON header for the member's page-->
+    <div class="jumbotron">
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="display-4" style="text-align:center; font-family: 'Alfa Slab One', cursive">Welcome, <span class="member-name"></span>!</h2>
+        </div>
       </div>
     </div>
-  </div>
+
+    <!--Body of information of member's page. Will eventually have the check in functionality, check out functionality-->
+    <div class = "container">
+      
+      <div class ="row justify-content-md-center">
+        <div class="col-md-auto">
+          <div class ="card text-center">
+            <div class ="card-header" style = "font-family: 'Alfa Slab One', cursive">Lets stay safe together, check into your location:</div>
+            <div class ="card-body">
+              <h5 class ="card-title">Check In</h5>
+              <p class ="card-text">Map for the check in goes here</p>
+              <a href ="#" class="btn btn-primary" id= "Checkin" >Check In</a>
+              <a href ="#" class="btn btn-info" id= "Checkout" >Check Out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class ="row justify-content-md-center">
+        <div class="col-md-auto">
+          <div class ="card text-center">
+            <div class ="card-header" style = "font-family: 'Alfa Slab One', cursive">Places Been today :</div>
+              <h6 class = "card-title" id="currentDay"></h5>
+                <div class ="card-body">
+                  <p class ="card-text">
+                    <ul class = "locations">
+                      <li>Location A</li>
+                      <li>Location B</li>
+                      <li>Location C</li>
+                    </ul>
+                  </p>
+                </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+
+  <script>
+    //time stamp of currenty date & time
+    var d = new Date(); 
+    document.getElementById("currentDay").innerHTML = d;
+
+    function timeOfDay() {
+      var currentHour= moment().hours();
+      console.log(currentHour);
+    }
+
+    timeOfDay();
+  </script>  
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>

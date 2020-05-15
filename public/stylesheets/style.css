@@ -2,3 +2,37 @@ form.signup,
 form.login {
   margin-top: 50px;
 }
+
+
+/*main.html font for the header */
+h1 {
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 25px;
+  text-align: center;
+}
+
+.jumbotron {
+  position: center;
+  padding-right: 0%;
+}
+
+/*placement of the COVID-19 statistics on the main.html */ 
+
+/* Jumbotron header font in members.html*/
+h2 {
+  font-family: 'Prata', serif;
+  position: left;
+}
+
+.card.text-center{
+  border-width: 2.5px;
+  border-style: solid;
+  border-color: rgba(2, 44, 63, 0.575);
+  border-radius: 2%;
+}
+
+/*members.html card header*/
+h5 {
+  font-weight: bold;
+}
+

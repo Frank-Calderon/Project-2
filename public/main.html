@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Covid Tracker</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <link href="stylesheets/style.css" rel="stylesheet">
+  <link href="public/login.html" rel="./login.html">
+  <link href="public/members.html" rel="./members.html">
+  <link href="public/signup.html" rel="./signup.html">
+
+</head>
+<!-- The main.html is the main page of the application. It is an informative page of why we need to practice social distancing.-->
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="nav-item">
+            <a class="nav-link" href="./login.html">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./signup.html">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="row">
+        <h1>We are all in this together. Keep safe, practice social distancing.</h1>
+      </div>
+    </div>  
+
+    <div class = "container">
+      <div class = "row">
+      <!--Dynamic COVID-19 stastics tracker sourced by Microsoft-->
+        <div class = "widget">
+            <div class = "col-md-4">
+              <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
+            </div>
+        </div>
+
+        <div class = "col-md-8">
+            <div class ="card text-center">
+             <!-- <div class ="card-header">COVID INFO TITLE</div>-->
+              <div class ="card-body">
+                <h1 class ="title">COVID-19: Contact Tracing Core Principles</h5>
+                  <p class ="card-text">Contact tracing is a key strategy for preventing further spread of COVID-19. According to the Centers for Disease Control and Prevention, contact tracing is a means of a core disease control measure that has been implemented by state and local health departments. Contact tracing can mitigate the spread of COVID-19. Public health officials work with patients who have tested or suspected confirmed infections. These patients are asked to recall everyone they have been in contact with, which then public health staff reaches out to those contacts to inform them they may have been exposed. The contacts are educated and informed how to separate themselves from others so they do not spread the infection. During times like this, it is important that we practice social distancing and do the best we can </p>
+              </div>
+            </div>
+        </div>
+
+      </div>
+    </div>
+
+ <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/login.js"></script>--> 
+  <script src="//www.bing.com/widget/bootstrap.answer.js" async=""></script>  <!--MICROSOFT WIDGET FOR COVID -->
+
+</body>
+
+</html>
