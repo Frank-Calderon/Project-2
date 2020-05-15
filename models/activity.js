@@ -30,7 +30,7 @@ module.exports = function(sequelize, DataTypes) {
     placeId: {
       type: DataTypes.STRING,
       allowNull: true,
-    }
+    },
   });
 
   return Activity;
