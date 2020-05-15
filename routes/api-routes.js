@@ -52,4 +52,14 @@ module.exports = function(app) {
       });
     }
   });
+
+  app.post('/api/a', function(req, res) {
+    console.log('Hi');
+    db.Activity.create({
+      userId: req.body.userId,
+      lat: req.body.lat,
+      lon: req.body.lon,
+    });
+    res.status(200).end();
+  });
 };

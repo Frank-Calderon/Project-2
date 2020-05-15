@@ -14,6 +14,14 @@
   <link href="public/signup.html" rel="./signup.html">
 </head>
 
+<style>
+#map {
+    height: 400px;
+    width: 80%;
+    margin: 30px auto;
+    }
+</style>
+
 <!--Home page is the member's page for users/members-->
 
 <body>
@@ -46,9 +54,26 @@
             <div class ="card-body">
               <h5 class ="card-title">Check In</h5>
               <p class ="card-text">Map for the check in goes here</p>
+              <div id="map"></div>
               <a href ="#" class="btn btn-primary" id= "Checkin" >Check In</a>
               <a href ="#" class="btn btn-info" id= "Checkout" >Check Out</a>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+
+      <div class ="row justify-content-md-center" style="display: none;" id="placeRow">
+        <div class="col-md-auto">
+          <div class ="card text-center">
+            <div class ="card-header" style = "font-family: 'Alfa Slab One', cursive">Where have you been today?</div>
+                <div class ="card-body">
+                  <p class ="card-text">
+                    <ul id = "locate">
+                    </ul>
+                  </p>
+                </div>
           </div>
         </div>
       </div>
@@ -89,7 +114,9 @@
 
     timeOfDay();
   </script>  
-
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzARLAw6uTb4IgCW0pnuIwK_BLL3WrcYM&callback=initMap">
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/members.js"></script>
 

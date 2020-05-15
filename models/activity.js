@@ -15,22 +15,22 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-    checkInTime: {
-      type: DataTypes.TIME,
-      allowNull: false,
-    },
-    checkOutTime: {
-      type: DataTypes.TIME,
-      allowNull: false,
-    },
-    placeName: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    placeId: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    // checkInTime: {
+    //   type: DataTypes.TIME,
+    //   allowNull: false,
+    // },
+    // checkOutTime: {
+    //   type: DataTypes.TIME,
+    //   allowNull: false,
+    // },
+    // placeName: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
+    // placeId: {
+    //   type: DataTypes.STRING,
+    //   allowNull: true,
+    // },
   });
 
   return Activity;
