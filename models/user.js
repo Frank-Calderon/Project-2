@@ -22,9 +22,9 @@ module.exports = function(sequelize, DataTypes) {
     infected: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      defaultValue: 0, //0=not infected, 1=warn, 2=reported infected
-      allowNull: false
-    }
+      defaultValue: 0, // 0=not infected, 1=warn, 2=reported infected
+      allowNull: false,
+    },
   });
   /* Creating a custom method for our User model.
   This will check if an unhashed password entered by the user can be compared
