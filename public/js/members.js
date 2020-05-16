@@ -1,4 +1,5 @@
 $(document).ready(() => {
+  initMap();
   // This file just does a GET request to figure out which user is logged in
   // and updates the HTML on the page
   $.get('/api/user_data').then((data) => {
@@ -61,6 +62,7 @@ $('#Checkin').on('click', function(event) {
       userId: data.id,
       lat: latitude,
       lon: longitude,
+      status: true,
     });
   });
 
@@ -112,6 +114,13 @@ $('#Checkout').on('click', function(event) {
   healed.style.display='none';
   checkIn.style.display='block';
   console.log('Checked Out');
+  $.get('api/user_data').then(function(data) {
+    const id = data.id;
+    $.ajax('/api/checkout/' + id, {
+      type: 'PUT',
+      data: {status: false},
+    });
+  });
 });
 
 let map; let infoWindow;
@@ -165,4 +174,4 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 //   places.push(li);
 //   locate.append(places);
 // }
-initMap();
+
