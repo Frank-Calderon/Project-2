@@ -1,23 +1,23 @@
 {
   "development": {
     "username": "root",
-    "password": "null",
+    "password": null,
     "database": "passport_demo",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "null",
-    "database": "q0ee0q81fx9472vt",
-    "host": "database_test",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
-    "password": "null",
-    "database": "q0ee0q81fx9472vt",
-    "host": "database_production",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
     "dialect": "mysql"
   }
 }
