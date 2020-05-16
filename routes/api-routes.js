@@ -49,6 +49,7 @@ module.exports = function(app) {
       res.json({
         email: req.user.email,
         id: req.user.id,
+        infected: req.user.infected,
       });
     }
   });
@@ -62,4 +63,34 @@ module.exports = function(app) {
     });
     res.status(200).end();
   });
+
+  app.put('/api/infected/:id', function(req, res) {
+    db.User.update(
+        req.body,
+        {
+          where: {
+            id: req.user.id,
+          },
+        },
+    ).then(function(dbUser) {
+      res.json(dbUser);
+      res.status(200).end();
+    });
+  });
+
+  app.put('/api/healed/:id', function(req, res) {
+    db.User.update(
+        req.body,
+        {
+          where: {
+            id: req.user.id,
+          },
+        },
+    ).then(function(dbUser) {
+      res.json(dbUser);
+      res.status(200).end();
+    });
+  });
 };
+
+
