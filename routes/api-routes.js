@@ -54,12 +54,17 @@ module.exports = function(app) {
     }
   });
 
+  let aId;
+
   app.post('/api/a', function(req, res) {
     console.log('Hi');
     db.Activity.create({
       userId: req.body.userId,
       lat: req.body.lat,
       lon: req.body.lon,
+      status: req.body.status,
+    }).then(function(res) {
+      aId = res.dataValues.id;
     });
     res.status(200).end();
   });
@@ -91,6 +96,17 @@ module.exports = function(app) {
       res.status(200).end();
     });
   });
+
+  app.put('/api/checkout/:id', function(req, res) {
+    db.Activity.update(
+        req.body,
+        {
+          where: {
+            id: aId,
+            userId: req.user.id,
+          },
+        },
+    );
+    console.log('hit');
+  });
 };
-
-

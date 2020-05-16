@@ -15,10 +15,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.FLOAT,
       allowNull: false,
     },
-    // checkInTime: {
-    //   type: DataTypes.TIME,
-    //   allowNull: false,
-    // },
+    status: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
     // checkOutTime: {
     //   type: DataTypes.TIME,
     //   allowNull: false,
