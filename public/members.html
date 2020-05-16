@@ -44,6 +44,18 @@
       </div>
     </div>
 
+    <div class="alert alert-info" role="alert" style="display: none;" id="miAlert">
+      SOMEONE NEAR YOU HAS BEEN FOUND TO BE INFECTED!! PLEASE VISIT YOUR DOCTOR TO FIND OUT IF YOU HAVE BEEN TO!!
+    </div>
+
+    <div class="alert alert-danger" role="alert" style="display: none;" style="text-align: center;" id="infAlert">
+      YOU HAVE BEEN INFECTED!! STAY HOME!! STOP THE SPREAD!! FEEL BETTER!!
+    </div>
+
+    <div class="alert alert-success" role="alert" style="display: none;" style="text-align: center;" id="hlAlert">
+      EVERYTHING CHECKS OUT!! YOU ARE IN GOOD HEALTH!! BE SAFE!!
+    </div>
+
     <!--Body of information of member's page. Will eventually have the check in functionality, check out functionality-->
     <div class = "container">
       
@@ -55,8 +67,10 @@
               <h5 class ="card-title">Check In</h5>
               <p class ="card-text">Map for the check in goes here</p>
               <div id="map"></div>
-              <a href ="#" class="btn btn-primary" id= "Checkin" >Check In</a>
-              <a href ="#" class="btn btn-info" id= "Checkout" >Check Out</a>
+              <a href ="#" class="btn btn-primary" id= "Checkin" style="display: block;">Check In</a>
+              <a href ="#" class="btn btn-primary" id= "Infected" data-infected="2" style="display: none;">I have been INFECTED!</a>
+              <a href ="#" class="btn btn-primary" id= "Healed" data-infected="0" style="display: none;">I have been HEALED!</a>
+              <a href ="#" class="btn btn-info" id= "Checkout" style="display: none;">Check Out</a>
             </div>
           </div>
         </div>
