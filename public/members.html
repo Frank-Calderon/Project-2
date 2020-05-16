@@ -20,6 +20,14 @@
     width: 80%;
     margin: 30px auto;
     }
+
+#Infected {
+  background-color: rgb(209, 14, 14);
+}
+
+#Healed {
+  background-color: rgb(7, 107, 24);
+}
 </style>
 
 <!--Home page is the member's page for users/members-->
@@ -64,8 +72,7 @@
           <div class ="card text-center">
             <div class ="card-header" style = "font-family: 'Alfa Slab One', cursive">Lets stay safe together, check into your location:</div>
             <div class ="card-body">
-              <h5 class ="card-title">Check In</h5>
-              <p class ="card-text">Map for the check in goes here</p>
+              <h5 class ="card-title">Check In:</h5>
               <div id="map"></div>
               <a href ="#" class="btn btn-primary" id= "Checkin" style="display: block;">Check In</a>
               <a href ="#" class="btn btn-primary" id= "Infected" data-infected="2" style="display: none;">I have been INFECTED!</a>

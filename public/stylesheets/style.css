@@ -16,6 +16,14 @@ h1 {
   padding-right: 0%;
 }
 
+.col-md-8 {
+  padding-bottom: 3%;
+}
+
+.widget {
+  width: auto;
+}
+
 /*placement of the COVID-19 statistics on the main.html */ 
 
 /* Jumbotron header font in members.html*/
