@@ -18,7 +18,7 @@ $(document).ready(() => {
 
 let latitude;
 let longitude;
-const api_key = process.env.API_KEY;
+const apiKey = process.env.API_KEY;
 const locate = document.getElementById('locate');
 const placeRow = document.getElementById('placeRow');
 const checkIn = document.getElementById('Checkin');
@@ -36,7 +36,7 @@ $('#Checkin').on('click', function(event) {
   infected.style.display='block';
   healed.style.display='block';
   checkOut.style.display='block';
-  const queryUrl = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + latitude + ',' + longitude + '&rankby=distance&key=' + api_key;
+  const queryUrl = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=' + latitude + ',' + longitude + '&rankby=distance&key=' + apiKey;
 
   $.ajax({
     url: queryUrl,
