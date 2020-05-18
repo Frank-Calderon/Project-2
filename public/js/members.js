@@ -29,6 +29,9 @@ const infAlert = document.getElementById('infAlert');
 const healed = document.getElementById('Healed');
 const hlAlert = document.getElementById('hlAlert');
 const miAlert = document.getElementById('miAlert');
+const locations = document.getElementById('locations');
+const places = [];
+let currentId = 0;
 
 $('#Checkin').on('click', function(event) {
   event.preventDefault();
@@ -44,19 +47,25 @@ $('#Checkin').on('click', function(event) {
     method: 'GET',
   }) .then(function(res) {
     placeRow.style.display='block';
-    const places = [];
     for (let i = 0; i <res.results.length; i++) {
       const place = res.results[i].name;
-      const placess = JSON.stringify(place);
-      const $li = '<li>' + placess + '</li>';
-      // const selectBtn = '<button id="selectBtn"> Select</button>';
-      // $li.append(selectBtn);
-      places.push($li);
-      locate.innerHTML = places;
-      console.log(places);
+      places.push(place);
+      const div = document.createElement('div');
+      div.id = places.length-1;
+      div.innerHTML=place+' <button class="selectBtn">Select</button><br><br>';
+      locate.append(div);
     }
-    // locate.innerHTML = '<li>' + res.results[0].name + '</li>';
-    console.log(res.results);
+  });
+
+  locate.addEventListener('click', function(event) {
+    if (event.target.matches('button')) {
+      event.preventDefault();
+      currentId = parseInt(event.target.parentElement.id);
+      const name = places[currentId];
+      const divs = document.createElement('div');
+      divs.innerHTML = name + '<br><br>';
+      $(locations).append(divs);
+    }
   });
 
   $.get('/api/user_data').then(function(data) {
@@ -67,8 +76,6 @@ $('#Checkin').on('click', function(event) {
       status: true,
     });
   });
-
-  console.log('Checked In');
 });
 
 $('#Infected').on('click', function(event) {
@@ -87,7 +94,6 @@ $('#Infected').on('click', function(event) {
       data: newInfectedState,
     });
   });
-  console.log('Infected');
 });
 
 $('#Healed').on('click', function(event) {
@@ -106,7 +112,6 @@ $('#Healed').on('click', function(event) {
       data: newInfectedState,
     });
   });
-  console.log('Healed');
 });
 
 $('#Checkout').on('click', function(event) {
@@ -115,7 +120,6 @@ $('#Checkout').on('click', function(event) {
   infected.style.display='none';
   healed.style.display='none';
   checkIn.style.display='block';
-  console.log('Checked Out');
   $.get('api/user_data').then(function(data) {
     const id = data.id;
     $.ajax('/api/checkout/' + id, {
@@ -166,14 +170,3 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
-
-// let places = [];
-// for (let i = 0; i <res.length; i++) {
-//   const place = res[i];
-//   const li = '<li>' + place + '</li>';
-//   const selectBtn = '<button id="selectBtn"> Select</button>';
-//   li.append(selectBtn);
-//   places.push(li);
-//   locate.append(places);
-// }
-
