@@ -118,6 +118,7 @@ $('#Checkout').on('click', function(event) {
   checkOut.style.display='none';
   infected.style.display='none';
   healed.style.display='none';
+  placeRow.style.display='none';
   checkIn.style.display='block';
   $.get('api/user_data').then(function(data) {
     const id = data.id;
