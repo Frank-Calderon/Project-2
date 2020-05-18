@@ -3,6 +3,8 @@ const express = require('express');
 const session = require('express-session');
 // Requiring passport as we've configured it
 const passport = require('./config/passport');
+// Requiring Dotenv to hide our API key
+require('dotenv').config();
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 3306;
