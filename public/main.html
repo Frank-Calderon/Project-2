@@ -1,67 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Covid Tracker</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-  <link href="stylesheets/style.css" rel="stylesheet">
-  <link href="public/login.html" rel="./login.html">
-  <link href="public/members.html" rel="./members.html">
-  <link href="public/signup.html" rel="./signup.html">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <link href="stylesheets/bideo.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+    <link href="stylesheets/style.css" rel="stylesheet" type="text/css">
+    <link href="public/login.html" rel="./login.html">
+    <link href="public/members.html" rel="./members.html">
+    <link href="public/signup.html" rel="./signup.html">
+    <title>Trace Me</title>
 </head>
+
 <!-- The main.html is the main page of the application. It is an informative page of why we need to practice social distancing.-->
 
-<style>
-  a.nav-link {
-    position: absolute;
-    size: 100%;
-  }
-  li.logo {
-    position: fixed;
-    size: 100%;
-    background-position: 100%;
-  }
-  .col-s-3 {
-    width: 100%;
-  }
-  .col-3 {
-    width: 100%;
-  }
-
-  .logo {
-    position: initial;
-  }
-</style>
-
 <body>
+<div id="container">
+  
+  <video id="background_video" loop muted></video>
+  <div id="video_cover"></div>
+  <div id="overlay"></div>
 
-    <div class = "container">
-      <div class="row">
-        <div class="col-3 col-s-3">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="nav-item">
-              <a class="nav-link" href="./login.html">Login</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="./signup.html">Sign Up</a>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-left">
-            <li class = "logo">
-              <img src= "logo.png" alt= "Logo" width= "20%" height="20%">
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  
-  
-  <!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="collapse navbar-collapse" id="navbarSupportedContent" >
+  <section id="main_content">
+    <div class="row">
+      <div class="col-3 col-s-3">
         <ul class="nav navbar-nav navbar-right">
           <li class="nav-item">
             <a class="nav-link" href="./login.html">Login</a>
@@ -76,68 +39,69 @@
           </li>
         </ul>
       </div>
-    </nav>-->
-
-    <div class="jumbotron">
-      <div class="row">
-        <h1>We are all in this together. Keep safe, practice social distancing.</h1>
-      </div>
-    </div>  
-
-    <div class = "container">
-      <div class = "row">
-        <div class = "col-md-4">
-            <div class ="card text-center">
-             <!-- <div class ="card-header">COVID INFO TITLE</div>-->
-              <div class ="card-body">
-                <h1 class ="title">COVID-19: Contact Tracing Core Principles</h1>
-                  <p class ="card-text">Contact tracing is a key strategy for preventing further spread of COVID-19. According to the Centers for Disease Control and Prevention, contact tracing is a means of a core disease control measure that has been implemented by state and local health departments. Contact tracing can mitigate the spread of COVID-19. Public health officials work with patients who have tested or suspected confirmed infections. These patients are asked to recall everyone they have been in contact with, which then public health staff reaches out to those contacts to inform them they may have been exposed. The contacts are educated and informed how to separate themselves from others so they do not spread the infection. During times like this, it is important that we practice social distancing and do the best we can to prevent the further spread of COVID-19.</p>
-                  <a href = "https://www.cdc.gov/coronavirus/2019-ncov/php/open-america/contact-tracing.html">source</a>
-              </div>
-            </div>
-        </div>
-
-        <div class = "col-md-4">
-          <div class ="card text-center">
-            <!-- <div class ="card-header">COVID INFO TITLE</div>-->
-             <div class ="card-body">
-               <h1 class ="title">KEEP UPDATED:</h1>
-                <a href="https://www.medicalnewstoday.com/articles/live-updates-coronavirus-covid-19#1">
-                  <img src="MedicalNewsLogo.png" alt="MedicalNewsToday" width="20%" height="20%">
-                </a>
-                <a href="https://www.cdc.gov/media/dpk/diseases-and-conditions/coronavirus/coronavirus-2020.html">
-                  <img src="CDC.png" alt="Centers for Disease Control" width="40%" height="40%">
-                </a>
-                <a href="https://www.nytimes.com/2020/05/11/us/coronavirus-updates.html">
-                  <img src="NYTimes.png" alt="NYTimes" width="20%" height="20%">
-                </a>
-                <a href="https://www.businessinsider.com/coronavirus-live-updates-latest-news">
-                  <img src="BusinessInsider.png" alt="BI" width="20%" height="20%">
-                </a>
-                <a href="https://www.npr.org/sections/coronavirus-live-updates/">
-                  <img src="NPR.png" alt="NPR" width="20%" height="20%">
-                </a>
-                <a href="https://www.nbcnews.com/health/coronavirus">
-                  <img src="NBC.png" alt="NPR" width="20%" height="20%">
-                </a>
-             </div>
-          </div>
-        </div>
-
-        <div class = "widget">
-          <div class = "col-lg-4">
-            <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
-          </div>
-        </div>
-
-      </div>
-      
     </div>
 
- <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <div class="row">
+      <div id="main-message">
+        <h1>We are all in this together. Keep safe, practice social distancing.</h1>
+      </div>
+    </div>
+    
+    <div class = "row">
+      <div class = "col-md-4">
+          <div class ="card text-center">
+           <!-- <div class ="card-header">COVID INFO TITLE</div>-->
+            <div class ="card-body">
+              <h1 class ="title">COVID-19: Contact Tracing Core Principles</h5>
+                <p class ="card-text">Contact tracing is a key strategy for preventing further spread of COVID-19. According to the Centers for Disease Control and Prevention, contact tracing is a means of a core disease control measure that has been implemented by state and local health departments. Contact tracing can mitigate the spread of COVID-19. Public health officials work with patients who have tested or suspected confirmed infections. These patients are asked to recall everyone they have been in contact with, which then public health staff reaches out to those contacts to inform them they may have been exposed. The contacts are educated and informed how to separate themselves from others so they do not spread the infection. During times like this, it is important that we practice social distancing and do the best we can to prevent the further spread of COVID-19.</p>
+                <a href = "https://www.cdc.gov/coronavirus/2019-ncov/php/open-america/contact-tracing.html" target="blank" id="source-link">source</a>
+            </div>
+          </div>
+      </div>
+
+      <div class = "col-md-4">
+        <div class ="card text-center">
+          <!-- <div class ="card-header">COVID INFO TITLE</div>-->
+           <div class ="card-body">
+             <h1 class ="title">KEEP UPDATED:</h1>
+              <a href="https://www.medicalnewstoday.com/articles/live-updates-coronavirus-covid-19#1" target="blank">
+                <img src="MedicalNewsLogo.png" alt="MedicalNewsToday" width="20%" height="20%">
+              </a>
+              <a href="https://www.cdc.gov/media/dpk/diseases-and-conditions/coronavirus/coronavirus-2020.html" target="blank">
+                <img src="CDC.png" alt="Centers for Disease Control" width="40%" height="40%">
+              </a>
+              <a href="https://www.nytimes.com/2020/05/11/us/coronavirus-updates.html" target="blank">
+                <img src="NYTimes.png" alt="NYTimes" width="20%" height="20%">
+              </a>
+              <a href="https://www.businessinsider.com/coronavirus-live-updates-latest-news" target="blank">
+                <img src="BusinessInsider.png" alt="BI" width="20%" height="20%">
+              </a>
+              <a href="https://www.npr.org/sections/coronavirus-live-updates/" target="blank">
+                <img src="NPR.png" alt="NPR" width="20%" height="20%">
+              </a>
+              <a href="https://www.nbcnews.com/health/coronavirus" target="blank">
+                <img src="NBC.png" alt="NPR" width="20%" height="20%">
+              </a>
+           </div>
+        </div>
+      </div>
+
+     <!--Dynamic COVID-19 stastics tracker sourced by Microsoft-->
+     <div class = "widget">
+      <div class = "col-md-4">
+        <div class="bingwidget" data-type="covid19" data-market="en-us" data-language="en-us" data-app="bingwidget"></div>
+      </div>
+    </div>
+  </section>
+  
+</div>
+
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/login.js"></script>--> 
-  <script src="//www.bing.com/widget/bootstrap.answer.js" async=""></script>  <!--MICROSOFT WIDGET FOR COVID -->
+<script src="//www.bing.com/widget/bootstrap.answer.js" async=""></script>  <!--MICROSOFT WIDGET FOR COVID -->
+<!--Bideo.js linked below as well as corresponding JS file to play the timelaspe video-->
+<script src=https://rishabhp.github.io/bideo.js/bideo.js></script>
+<script src="js/bideo.js" type="text/javascript"></script>
 
 </body>
-
 </html>

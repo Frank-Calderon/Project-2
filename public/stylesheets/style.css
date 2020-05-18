@@ -63,3 +63,36 @@ h5 {
 #miAlert, #infAlert, #hlAlert {
   text-align: center;
 }
+
+.navbar-right{
+  padding-right: 100px;
+}
+
+a.nav-link {
+  position: absolute;
+  size: 100%;
+}
+li.logo {
+  position: fixed;
+  size: 100%;
+  background-position: 100%;
+}
+.col-s-3 {
+  width: 100%;
+}
+.col-3 {
+  width: 100%;
+}
+
+.logo {
+  position: initial;
+}
+
+p {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#main-message {
+  padding-bottom: 50px;
+}
